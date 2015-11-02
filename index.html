@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom google maps</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div id="map"
+    data-pin-lat="-23.562353"
+    data-pin-lng="-46.503113"
+    data-map-lat="-23.562353"
+    data-map-lng="-46.503113">
+  </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP3iIRdwkWKwegt2dU4nA4KdpiInTmSlE"></script>
+  <script src="scripts/map.js"></script>
+  <script>
+    var map = new Map({
+       'name': 'name'
+      ,'wrapperId':'map'
+      ,'zoom': 16
+      // ,'icon': 'images/pin.png'
+      ,'mobile': false
+      ,'color': {
+         'street': '#14191f'
+        ,'roadText': '#bfcbda'
+        ,'importantPlaces': '#abb7c3'
+        ,'landscape': '#203246'
+        ,'landscape__man_made': '#203246'
+        ,'iconPlaces': [
+          { 'visibility': 'on' },
+          { 'invert_lightness': true },
+          { 'saturation': 41 },
+          { 'gamma': 1.71 },
+          { 'hue': '#005eff' }
+        ]
+      }
+    });
+  </script>
+</body>
+</html>

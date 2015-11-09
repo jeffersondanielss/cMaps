@@ -1,0 +1,121 @@
+@import "jeet/jeet";
+@import "core/core";
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px; 
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: $bg;
+  font-family: 'roboto';
+  color: $text-color;
+}
+
+.command { 
+  background: darken($bg, 5%);
+  padding: 0 5px;
+  border-radius: 3px;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.code {
+  white-space: pre-wrap;
+  line-height: 18px;
+  font-size: 14px;
+  display: block;
+  padding-left: 15px;
+  border-left: 2px solid $primary-color;
+}
+
+/*@include j-edit();*/
+
+.wrapper {
+  @include j-center(75%); 
+  @include j-cf();
+}
+
+.xmp {
+  margin: 10px 0px 10px 0px;
+}
+
+.header {
+  height: 40%;
+  background: $secundary-color;
+  box-shadow: inset 0px -2px 10px #444;
+}
+
+  .header__title {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px;
+    text-transform: uppercase;
+    color: $primary-color;
+    font-weight: 900;
+  }
+
+.get-started {
+  margin: 30px 0;
+}
+
+  .get-started__title {
+    @extend %section-title;
+  }
+
+  .get-started__content {
+    font-weight: 300;
+  }
+
+  .get-started__content__steps {
+    padding: 10px 0px 0px 25px;
+
+    li {
+      list-style-type: decimal;
+      margin-bottom: 5px;
+    }
+  }
+
+.example {
+  margin: 40px 0;
+  @include j-cf();
+}
+
+  .examples__title {
+    @extend %section-title;
+  }
+
+  .example__config__title {
+    color: $primary-color;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .example__config, .example__demo {
+    @include j-column(1/2);
+  }
+
+  .example__demo {
+    height: 250px;
+  }
+
+.footer {
+  background-color: $secundary-color; 
+  padding: 10px 0;
+  border-top: 1px solid darken($secundary-color, 8%);
+}
+
+  .footer__info {
+    text-align: center;
+    color: $primary-color;
+  }
+
+  .footer__info__heart {
+    color: red;
+  }

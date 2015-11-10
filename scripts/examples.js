@@ -5,13 +5,14 @@
     ,'wrapperId':'exampleOne'
     ,'zoom': 12
     ,'mobile': false
+    ,'icon': 'images/library.svg'
   });
 
   var exampleTwo = new Map({
      'name': 'exampleTwo'
     ,'wrapperId':'exampleTwo'
     ,'zoom': 16
-    // ,'icon': 'images/pin.png'
+    ,'icon': 'images/bar.svg'
     ,'mobile': false
     ,'color': {
        'street': '#14191f'
@@ -33,7 +34,7 @@
      'name': 'exampleTree'
     ,'wrapperId':'exampleTree'
     ,'zoom': 10
-    // ,'icon': 'images/pin.png'
+    ,'icon': 'images/university.svg'
     ,'mobile': false
     ,'color': {
        'street': '#14191f'

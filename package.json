@@ -1,0 +1,24 @@
+{
+  "name": "custom-google-maps",
+  "version": "1.0.0",
+  "description": "´´´\r <div id=\"map\"\r   data-pin-lat=\"-23.562353\"\r   data-pin-lng=\"-46.503113\"\r   data-map-lat=\"-23.562353\"\r   data-map-lng=\"-46.503113\">\r </div>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffersondanielss/custom-google-maps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffersondanielss/custom-google-maps/issues"
+  },
+  "homepage": "https://github.com/jeffersondanielss/custom-google-maps#readme",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-uglify": "^1.0.1"
+  }
+}

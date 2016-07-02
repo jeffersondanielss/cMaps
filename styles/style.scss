@@ -1,5 +1,10 @@
 @import "jeet/jeet";
-@import "core/core";
+@import "core/reset";
+
+$primary-color: #203246;
+$secundary-color: #E4DED4;
+$text-color: #7a746b;
+$bg: #F1F1F1;
 
 html, body {
   margin: 0px;
@@ -10,17 +15,51 @@ html, body {
 }
 
 body {
-  background: $bg;
+  background: #FFFFFF;
   font-family: 'roboto';
   color: $text-color;
 }
 
+.bt {
+  background-color: $primary-color;
+  color: #FFF;
+  padding: 10px 20px;
+  margin-top: 10px;
+  display: inline-block;
+  float: right;
+  border-radius: 5px;
+  transition: .5s linear;
+  position: relative;
+
+  &:hover {
+    color: #FFF;
+    background-color: lighten($primary-color, 5%);
+    transition: .5s linear;
+  }
+
+  &:after {
+    content: 'coming soon';
+    position: absolute;
+    bottom: -12px;
+    right: 0;
+    display: block;
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
 .command { 
   background: darken($bg, 5%);
-  padding: 0 5px;
+  padding: 5px;
   border-radius: 3px;
   line-height: 24px;
   word-wrap: break-word;
+  margin: 10px 0;
+  display: inline-block;
+  font-size: 14px;
+  box-shadow: 0 4px 5px #BBB;
+  border: 1px solid #DDD;
 }
 
 .code {
@@ -32,90 +71,67 @@ body {
   border-left: 2px solid $primary-color;
 }
 
-/*@include j-edit();*/
-
 .wrapper {
   @include j-center(75%); 
   @include j-cf();
 }
 
 .xmp {
-  margin: 10px 0px 10px 0px;
+  padding-left: 20px;
+  display: block;
 }
 
-.header {
-  height: 40%;
-  background: $secundary-color;
-  box-shadow: inset 0px -2px 10px #444;
+.examples {
+  width: 100%;
+  height: 50%;
+  float: left;
 }
 
-  .header__title {
-    text-align: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 60px;
-    text-transform: uppercase;
-    color: $primary-color;
-    font-weight: 900;
+  .example__demo {
+    height: 100%;
   }
 
 .get-started {
-  margin: 30px 0;
+  @include j-cf();
+  width: 80%;
+  float: left;
+  margin: 50px 10%;
+  background: #FFFFFF;
 }
 
   .get-started__title {
-    @extend %section-title;
-  }
-
-  .get-started__content {
-    font-weight: 300;
-  }
-
-  .get-started__content__steps {
-    padding: 10px 0px 0px 25px;
-
-    li {
-      list-style-type: decimal;
-      margin-bottom: 5px;
-    }
-  }
-
-.example {
-  margin: 40px 0;
-  @include j-cf();
-}
-
-  .examples__title {
-    @extend %section-title;
-  }
-
-  .example__config__title {
-    color: $primary-color;
-    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 20px;
-  }
-
-  .example__config, .example__demo {
-    @include j-column(1/2);
-  }
-
-  .example__demo {
-    height: 250px;
-  }
-
-.footer {
-  background-color: $secundary-color; 
-  padding: 10px 0;
-  border-top: 1px solid darken($secundary-color, 8%);
-}
-
-  .footer__info {
     text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
     color: $primary-color;
+    margin-bottom: 10px;
   }
 
-  .footer__info__heart {
-    color: red;
+  .get-started__subtitle {
+    text-align: center;
+    margin-bottom: 40px;
   }
+
+    .content__steps-title {
+      color: $primary-color;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .content__steps {
+      @include j-column( 1/3 );
+    }
+
+@media screen and ( max-width: 1000px ) {
+  
+  .wrapper {
+    width: 90%;
+  }
+
+  .content__steps {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+}

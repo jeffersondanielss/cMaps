@@ -97,20 +97,17 @@
     };
 
     Map.prototype.setOptions = function(){
-
-      if(options.mobile) { var draggable = false; }
-
       var mapOptions = {
         zoom: options.zoom || 15,
         center: new google.maps.LatLng(mapLat, mapLng),
         panControl: false,
         zoomControl: options.zoomControl,
-        mapTypeControl: true,
+        mapTypeControl: options.mapTypeControl,
         scaleControl: false,
         streetViewControl: options.streetView,
         overviewMapControl: false,
-        scrollwheel: false,
-        draggable: draggable,
+        scrollwheel: options.scrollwheel,
+        draggable: options.draggable,
         mapTypeControlOptions: {
           mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
         }

@@ -1,26 +1,3 @@
-/*------------------------------*\
-
-  GOOGLE MAPS CUSTON
-
-  API for create styles
-  http://googlemaps.github.io/js-samples/styledmaps/wizard/index.html
-
-  Require the google API load BEFORE this script
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-
-  # Wrapper map need be something like:
-  <div id="map" data-pin-lat="-23.562353" data-pin-lng="-46.503113" data-map-lat="-23.562353" data-map-lng="-46.503113" </div>
-
-  # Function arguments
-  1 - The name map (string)                  !OPTIONAL
-  2 - Name wrapper map ID (string)           !REQUIRED
-  3 - Zoom map (number)                      !OPTIONAL
-  4 - Pin url (string)                       !OPTIONAL
-  5 - Define if device is mobile (boolean)   !OPTIONAL
-  6 - Object with color settings (Object)    !OPTIONAL
-
-\*------------------------------*/
-
 (function(){
 
   Map = function(options){
@@ -127,10 +104,10 @@
         zoom: options.zoom || 15,
         center: new google.maps.LatLng(mapLat, mapLng),
         panControl: false,
-        zoomControl: false,
-        mapTypeControl: false,
+        zoomControl: options.zoomControl,
+        mapTypeControl: true,
         scaleControl: false,
-        streetViewControl: false,
+        streetViewControl: options.streetView,
         overviewMapControl: false,
         scrollwheel: false,
         draggable: draggable,

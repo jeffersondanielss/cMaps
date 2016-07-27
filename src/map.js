@@ -2,13 +2,12 @@
 
   Map = function(options){
 
-    var _this = this
-      , draggable = true
-      , wrapperMap = document.getElementById(options.wrapperId)
-      , mapLat = parseFloat(wrapperMap.getAttribute('data-map-lat'))
-      , mapLng = parseFloat(wrapperMap.getAttribute('data-map-lng'))
-      , pinLat = parseFloat(wrapperMap.getAttribute('data-pin-lat'))
-      , pinLng = parseFloat(wrapperMap.getAttribute('data-pin-lng'));
+    var _this = this,
+        wrapperMap = document.getElementById(options.wrapperId),
+        mapLat = parseFloat(wrapperMap.getAttribute('data-map-lat')),
+        mapLng = parseFloat(wrapperMap.getAttribute('data-map-lng')),
+        pinLat = parseFloat(wrapperMap.getAttribute('data-pin-lat')),
+        pinLng = parseFloat(wrapperMap.getAttribute('data-pin-lng'));
 
     Map.prototype.stylesConfig = function(){
       var styles = [
@@ -111,11 +110,11 @@
         mapTypeControlOptions: {
           mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
         }
-      }
+      };
 
       return {
         mapOptions: mapOptions
-      }
+      };
 
     }();
 
@@ -129,17 +128,17 @@
         animation: google.maps.Animation.DROP
       });
 
-      if(!options.color) {return false}
+      if(!options.color) { return false; }
 
       _this.stylesConfig();
 
       //Associate the styled map with the MapTypeId and set it to display.
       map.mapTypes.set('map_style', styledMap);
       map.setMapTypeId('map_style');
-    }
+    };
 
-    this.init()
+    this.init();
 
-  }
+  };
 
 })();

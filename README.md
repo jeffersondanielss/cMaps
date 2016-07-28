@@ -1,4 +1,4 @@
-# Custom Google Maps
+# Custom Map
 
 First of all, get a Google API [Key/Authentication](https://developers.google.com/maps/documentation/javascript/get-api-key), and load the script.
 
@@ -31,7 +31,7 @@ First of all, get a Google API [Key/Authentication](https://developers.google.co
 
 ### Starting map
 ```js
-var map = new Map({ options });
+var map = new cMap({ options });
 ```
 
 ### Options
@@ -63,8 +63,8 @@ color.inconPlaces.hue | string | false | undefined
 ### Example
 
 ```js
-var map = new Map({
-  'name': 'map',
+var map = new cMap({
+  'name': 'cMap',
   'wrapperId':'map',
   'zoom': 16,
   'zoomControl': true,

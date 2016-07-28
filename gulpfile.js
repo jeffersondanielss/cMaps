@@ -3,21 +3,21 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     uglify = require('gulp-uglify');
 
-gulp.task('clean', function(){
+gulp.task('clean', () => {
   return gulp.src('dist/')
   .pipe( clean() );
 });
 
-gulp.task('jshint', function(){
+gulp.task('jshint', () => {
   return gulp.src('src/**.*')
   .pipe( jshint() )
   .pipe( jshint.reporter('default') );
 });
 
-gulp.task('uglify', ['clean'], function(){
+gulp.task('uglify', ['clean'], () => {
   return gulp.src('src/**.*')
   .pipe( uglify() )
   .pipe( gulp.dest('dist/') );
 });
 
-gulp.task('build', ['jshint', 'uglify']);
+gulp.task('default', ['jshint', 'uglify']);

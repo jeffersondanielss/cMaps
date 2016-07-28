@@ -1,6 +1,6 @@
-(function(){
+(function( ){
 
-  Map = function(options){
+  cMap = function(options){
 
     var _this = this,
         wrapperMap = document.getElementById(options.wrapperId),
@@ -9,7 +9,7 @@
         pinLat = parseFloat(wrapperMap.getAttribute('data-pin-lat')),
         pinLng = parseFloat(wrapperMap.getAttribute('data-pin-lng'));
 
-    Map.prototype.stylesConfig = function(){
+    cMap.prototype.stylesConfig = function(){
       var styles = [
         {
           'featureType': 'road',
@@ -95,7 +95,7 @@
 
     };
 
-    Map.prototype.setOptions = function(){
+    cMap.prototype.setOptions = function(){
       var mapOptions = {
         zoom: options.zoom || 15,
         center: new google.maps.LatLng(mapLat, mapLng),
@@ -118,7 +118,7 @@
 
     }();
 
-    Map.prototype.init = function() {
+    cMap.prototype.init = function() {
       var map = new google.maps.Map(wrapperMap, _this.setOptions.mapOptions),
 
       marker = new google.maps.Marker({
@@ -141,4 +141,4 @@
 
   };
 
-})();
+})( );

@@ -36,29 +36,29 @@ var map = new cMap({ options });
 
 ### Options
 
-Option | Type | Required | Description
------- | ---- | ------- | -----------
-name | string | false | map name
-wrapperId | true | true | container id map
-icon | string | false | url to pin the way
-zoom | number | false | Initial zoom map
-zoomControl | boolean | false | manual zoom control
-scrollwheel | boolean | false | mouse scroll for zoom
-mapTypeControl | boolean | false | Choose the map type in the upper left corner
-draggable | boolean | false | if this option is false the map can not be dragged
-streetView | boolean | false | Control street view
-color | object | false | undefined
-color.street | string | false | undefined
-color.roadText | string | false | undefined
-color.importantPlaces | string | false | undefined
-color.landscape | string | false | undefined
-color.landscape__man_made | string | false | undefined
-color.iconPlaces | array | false | undefined
-color.inconPlaces.visibility | string | false | undefined
-color.inconPlaces.invert_lightness | boolean | false | undefined
-color.inconPlaces.saturation | number | false | undefined
-color.inconPlaces.gamma | number | false | undefined
-color.inconPlaces.hue | string | false | undefined
+Option | Type | Description | Example
+------ | ---- | ----------- | -----------
+name | string | Map name | 'cMap'
+wrapperId | true | Container id map | 'map'
+icon | string | url to pin the way | 'imgs/pin.png'
+zoom | number | Initial zoom map | 16
+zoomControl | boolean | Manual zoom control | true
+scrollwheel | boolean | Mouse scroll for zoom | false
+mapTypeControl | boolean | Choose the map type in the upper left corner | true
+draggable | boolean | If this option is false the map can not be dragged | true
+streetView | boolean | Control street view | false
+color | object | object With the map colors | {}
+color.street | string | Street colors | '#FF0000'
+color.roadText | string | Color street names | '#FF0000'
+color.importantPlaces | string | Names of important places | '#FF0000'
+color.landscape | string | Color contour seats | '#FF0000'
+color.landscape__man_made | string | Color of the blocks | '#FF0000'
+color.iconPlaces | array | Configuration array of icons | []
+color.inconPlaces.visibility | string | Enable the display of icons places | 'on' or 'off'
+color.inconPlaces.invert_lightness | boolean | Enables invert lightness | true
+color.inconPlaces.saturation | number | Icon saturation | 41
+color.inconPlaces.gamma | number | Icon gamma | 1.71
+color.inconPlaces.hue | string | Icon hue | '#FF0000'
 
 ### Example
 

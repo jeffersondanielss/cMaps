@@ -1,11 +1,16 @@
 (function(){
 
-  var example = new Map({
-     'name': 'exampleTree'
+  var example = new cMap({
+     'name': 'cMap'
     ,'wrapperId':'example'
     ,'zoom': 16
     ,'icon': 'images/university.svg'
     ,'mobile': false
+    ,'zoomControl': true
+    ,'mapTypeControl': true
+    ,'scrollwheel': true
+    ,'streetView': true
+    ,'draggable': true
     ,'color': {
        'street': '#14191f'
       ,'roadText': '#bfcbda'

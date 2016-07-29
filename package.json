@@ -1,0 +1,28 @@
+{
+  "name": "custom-google-maps",
+  "version": "1.0.0",
+  "description": "Customize API options the google maps",
+  "main": "index.js",
+  "scripts": {
+    "lint": "gulp jshint",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffersondanielss/custom-google-maps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffersondanielss/custom-google-maps/issues"
+  },
+  "homepage": "http://jeffersondanielss.github.io/custom-google-maps/",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-jshint": "^2.0.1",
+    "gulp-uglify": "^1.5.4",
+    "jshint": "^2.9.2"
+  }
+}

@@ -39,7 +39,7 @@ var map = new cMap({ options });
 Option | Type | Description | Example
 ------ | ---- | ----------- | -----------
 name | string | Map name | 'cMap'
-wrapperId | true | Container id map | 'map'
+wrapperId | string | Container id map | 'map'
 icon | string | url to pin the way | 'imgs/pin.png'
 zoom | number | Initial zoom map | 16
 zoomControl | boolean | Manual zoom control | true

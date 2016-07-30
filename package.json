@@ -1,7 +1,7 @@
 {
-  "name": "custom-google-maps",
-  "version": "1.0.0",
-  "description": "Customize API options the google maps",
+  "name": "cMap",
+  "version": "1.1.0",
+  "description": "Control options and customization of the Google Maps colors",
   "main": "index.js",
   "scripts": {
     "lint": "gulp jshint",
@@ -9,18 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeffersondanielss/custom-google-maps.git"
+    "url": "git+https://github.com/jeffersondanielss/cMap.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jeffersondanielss/custom-google-maps/issues"
+    "url": "https://github.com/jeffersondanielss/cMap/issues"
   },
-  "homepage": "http://jeffersondanielss.github.io/custom-google-maps/",
+  "homepage": "http://jeffersondanielss.github.io/cMap/",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
     "gulp-jshint": "^2.0.1",
     "gulp-uglify": "^1.5.4",
     "jshint": "^2.9.2"

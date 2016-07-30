@@ -1,4 +1,5 @@
 # Custom Map
+> Control options and customization of the Google Maps colors, just 1,91 KB.
 
 First of all, get a Google API [Key/Authentication](https://developers.google.com/maps/documentation/javascript/get-api-key), and load the script.
 
@@ -35,11 +36,12 @@ var map = new cMap({ options });
 ```
 
 ### Options
+> The only required is **wrapperId**
 
 Option | Type | Description | Example
 ------ | ---- | ----------- | -----------
 name | string | Map name | 'cMap'
-wrapperId | true | Container id map | 'map'
+wrapperId | string | Container id map | 'map'
 icon | string | url to pin the way | 'imgs/pin.png'
 zoom | number | Initial zoom map | 16
 zoomControl | boolean | Manual zoom control | true
@@ -89,5 +91,52 @@ var map = new cMap({
 });
 ```
 
+### It is not enough?
+
+If the pre-defined styles here are not enough you can still use the [Styled Maps Wizard](http://googlemaps.github.io/js-samples/styledmaps/wizard/index.html) to export a JSON with all possible options and include as a parameter to the cMap.
+
+#### Example
+
+```js
+var options = {
+  'name': 'cMap',
+  'wrapperId':'map',
+  'zoom': 16,
+  'zoomControl': true,
+  'mapTypeControl': true,
+  'scrollwheel': false,
+  'streetView': true,
+  'draggable': false
+};
+
+//Code that was exported from Styled Maps Wizard
+var styles = [
+  {
+    "featureType": "water",
+    "stylers": [
+      { "hue": "#0055ff" }
+    ]
+  },{
+    "featureType": "road.highway",
+    "stylers": [
+      { "hue": "#6600ff" }
+    ]
+  },{
+    "featureType": "landscape",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "hue": "#00ff2b" }
+    ]
+  },{
+    "featureType": "poi.attraction",
+    "stylers": [
+      { "hue": "#0011ff" }
+    ]
+  }
+];
+
+var map = new cMap( options, styles );
+```
+
 #### Disclaimer
-> Get a [Key/Authentication](https://developers.google.com/maps/documentation/javascript/get-api-key) or/and Create more styles in [this](http://googlemaps.github.io/js-samples/styledmaps/wizard/index.html) API.
+> Get a [Key/Authentication](https://developers.google.com/maps/documentation/javascript/get-api-key).

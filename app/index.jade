@@ -1,0 +1,55 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Custom Map
+    meta(name='description', content='Control options and customization of the Google Maps colors.')
+    meta(name='viewport', content='width=device-width')
+    link(rel='stylesheet', href='dist/styles/main.css')
+    meta(property='og:title', content='Custom Map')
+    meta(property='og:description', content='Control options and customization of the Google Maps colors')
+    meta(property='og:url', content='https://github.com/jeffersondanielss/cMap')
+    // <meta property="og:image" content="http://jeffersondanielss.github.io/cMap/app/images/cMap.png">
+    link(rel="icon", href="app/images/favicon.ico")
+
+  body
+    header.header
+      #example.header__map(data-pin-lat='-23.558752', data-pin-lng='-46.660247', data-map-lat='-23.558752', data-map-lng='-46.660247')
+
+    section.get-started
+      div.wrapper
+        h2.get-started__title custom map
+        p.get-started__subtitle To customize your map just follow these four steps.
+
+        ul.get-started__content
+
+          li.content__steps
+            h2.content__steps-title 1. Include Google API
+            code.command
+              xmp
+                script(src='https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY')
+
+          li.content__steps
+            h2.content__steps-title 2. Include this plugin
+            code.command
+              xmp
+                script(src='dist/map.js')
+
+          li.content__steps
+            h2.content__steps-title 3. Include a basic markup HTML map
+            code.command
+              xmp
+                #example(data-pin-lat='-23.558752', data-pin-lng='-46.660247', data-map-lat='-23.558752', data-map-lng='-46.660247')
+
+          li.content__steps
+            h2.content__steps-title 4. start the plugin
+            code.command
+              xmp var example = new cMap({ options });
+            
+    footer.footer
+      a.footer__link(href="https://github.com/jeffersondanielss/cMap/blob/master/README.md", target="_blank") Usage
+      span |
+      a.footer__link(href="https://github.com/jeffersondanielss/cMap", target="_blank") Fork it!
+
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCP3iIRdwkWKwegt2dU4nA4KdpiInTmSlE')
+    script(src='dist/scripts/all.min.js')

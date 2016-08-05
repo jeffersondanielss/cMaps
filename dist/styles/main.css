@@ -369,7 +369,7 @@ table {
 }
 .header {
   width: 100%;
-  height: 50%;
+  height: 400px;
   float: left;
   margin-bottom: 50px;
   position: fixed;
@@ -390,7 +390,7 @@ table {
   background: #fff;
   position: relative;
   z-index: 2;
-  margin: 20% auto 50px;
+  margin: 400px auto 50px;
   padding-top: 30px;
 }
 .get-started__title {
@@ -445,12 +445,12 @@ table {
     margin-bottom: 60px;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 620px) {
   .header,
   .header__map {
     height: 200px;
   }
   .get-started {
-    margin-top: 200px;
+    margin-top: 220px;
   }
 }

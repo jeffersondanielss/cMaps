@@ -19,7 +19,7 @@ gulp.task('jshint', () => {
 });
 
 gulp.task('uglify', () => {
-  return gulp.src(['app/scripts/map.js', 'app/scripts/main.js'])
+  return gulp.src(['app/scripts/cMap.js', 'app/scripts/main.js'])
   .pipe( uglify() )
   .pipe( concat('all.min.js') )
   .pipe( gulp.dest('dist/scripts/') );

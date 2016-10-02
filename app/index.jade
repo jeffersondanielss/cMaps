@@ -24,16 +24,17 @@ html(lang='en')
         ul.get-started__content
 
           li.content__steps
-            h2.content__steps-title 1. Include Google API
+            h2.content__steps-title 1. Install
             code.command
               xmp
-                script(src='https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY')
+                | bower install cMap --save
 
           li.content__steps
-            h2.content__steps-title 2. Include this plugin
+            h2.content__steps-title 2. Include scripts
             code.command
               xmp
-                script(src='dist/map.js')
+                <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+                <script src="bower_components/cMap/dist/cMap.min.js"></script>
 
           li.content__steps
             h2.content__steps-title 3. Include a basic markup HTML map

@@ -9,6 +9,8 @@ First of all, get a Google API [Key/Authentication](https://developers.google.co
 bower install cMap --save
 ```
 
+After installing, include the scripts in html.
+
 ```html
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 <script src="bower_components/cMap/dist/cMap.min.js"></script>

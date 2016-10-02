@@ -1,18 +1,19 @@
 {
   "name": "cMaps",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "Control options and customization of the Google Maps colors",
-  "main": "index.js",
+  "main": "src/map.js",
   "scripts": {
     "lint": "gulp jshint",
-    "build": "gulp build"
+    "build": "gulp build",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jeffersondanielss/cMap.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jeffersondanielss/cMap/issues"
   },
@@ -23,6 +24,7 @@
     "gulp-clean": "^0.3.2",
     "gulp-jshint": "^2.0.1",
     "gulp-uglify": "^1.5.4",
+    "gulp-watch": "^4.3.10",
     "jshint": "^2.9.2"
   }
 }

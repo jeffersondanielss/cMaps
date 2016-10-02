@@ -3,8 +3,15 @@
 
 First of all, get a Google API [Key/Authentication](https://developers.google.com/maps/documentation/javascript/get-api-key), and load the script.
 
+### Install
+
+```bash
+bower install cMap --save
+```
+
 ```html
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+<script src="bower_components/cMap/dist/cMap.min.js"></script>
 ```
 
 ### Wrapper map need be something like:
@@ -93,7 +100,7 @@ var map = new cMap({
 
 ### It is not enough?
 
-If the pre-defined styles here are not enough you can still use the [Styled Maps Wizard](http://googlemaps.github.io/js-samples/styledmaps/wizard/index.html) to export a JSON with all possible options and include as a parameter to the cMap.
+If the pre-defined styles here are not enough you can still use the [Styled Maps Wizard](http://googlemaps.github.io/js-samples/styledmaps/wizard/index.html) or [Snazzy Maps](https://snazzymaps.com) to export a JSON with all possible options and include as a parameter to the cMap.
 
 #### Example
 

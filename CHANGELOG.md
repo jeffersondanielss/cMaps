@@ -1,3 +1,7 @@
+# Change Log
+All notable changes to this project will be documented in this file.
+This project adheres to [Semantic Versioning](http://semver.org/).
+
 ## [2.0.0] - 2017-11-01
 
 ### Added
@@ -8,10 +12,6 @@
 - properties lat and lang that were in markup are now passed as parameter when cMap is started
 - style is now a property of options
 - dynamically creating google API script
-
-# Change Log
-All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.0.1] - 2016-10-01
 ### Added

@@ -1,0 +1,15 @@
+{
+  "node": true,
+  "lastsemic": true,
+  "asi": true,
+  "esversion":6,
+  "camelcase": true,
+  "indent": true,
+  "nocomma": true,
+  "quotmark": "single",
+  "strict": true,
+  "globals": {
+    "google": true,
+    "document": true
+  }
+}

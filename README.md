@@ -3,6 +3,7 @@
 <center>
   <img src="preview.png" alt="Preview">
 </center>
+
 ### Install
 
 ```bash

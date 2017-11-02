@@ -12,39 +12,37 @@
 }(this, function cMap(options){
   'use strict'
   
-  var wrapper = document.getElementById(options.wrapperId)
+  const wrapper = document.getElementById(options.wrapperId)
 
-  function configure(options) {
-    return {
-      zoom: options.zoom || 15,
-      center: new google.maps.LatLng(options.mapLat, options.mapLng),
-      panControl: false,
-      zoomControl: options.zoomControl,
-      mapTypeControl: options.mapTypeControl,
-      scaleControl: false,
-      streetViewControl: options.streetView,
-      overviewMapControl: false,
-      scrollwheel: options.scrollwheel,
-      draggable: options.draggable,
-      mapTypeControlOptions: {
-        mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-      }
+  const configure = options => ({
+    zoom: options.zoom || 15,
+    center: new google.maps.LatLng(options.mapLat, options.mapLng),
+    panControl: false,
+    zoomControl: options.zoomControl,
+    mapTypeControl: options.mapTypeControl,
+    scaleControl: false,
+    streetViewControl: options.streetView,
+    overviewMapControl: false,
+    scrollwheel: options.scrollwheel,
+    draggable: options.draggable,
+    mapTypeControlOptions: {
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
     }
-  }
+  })
 
-  function loadGoogleAPI(key, callback) {
+  const loadGoogleAPI = ({ key }, callback) => {
     var script = document.createElement('script')
     script.type = 'text/javascript'
-    script.src = 'https://maps.googleapis.com/maps/api/js?key=' + key
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${key}`
     script.onload = callback
     document.body.append(script)
   }
 
-  function createStyles(styles, name){
+  const createStyles = ({name, styles}) => {
     return new google.maps.StyledMapType(styles, {name: name})
   }
 
-  function createMap(div, config, layout) {
+  const createMap = (div, config, layout) => {
     var map = new google.maps.Map(div, config)
     map.mapTypes.set('map_style', layout)
     map.setMapTypeId('map_style')
@@ -52,22 +50,22 @@
     return map
   }
 
-  function marker(map){
+  const marker = (map, { pinLat, pinLng, icon }) => {
     var marker = new google.maps.Marker({
-      position: { lat: options.pinLat, lng: options.pinLng },
+      position: { lat: pinLat, lng: pinLng },
       map: map,
-      icon: options.icon,
+      icon: icon,
       animation: google.maps.Animation.DROP
     })
   }
 
-  function initialize() {
-    var layout = createStyles(options.styles, options.name)
-    var config = configure(options)
-    var map = createMap(wrapper, config, layout)
-    var market = marker(map)
+  const initialize = () => {
+    const layout = createStyles(options)
+    const config = configure(options)
+    const map = createMap(wrapper, config, layout)
+    const market = marker(map, options)
   }
 
-  loadGoogleAPI(options.key, initialize)
+  loadGoogleAPI(options, initialize)
 
 }))

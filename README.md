@@ -1,5 +1,5 @@
 # Custom Map
-> Control options and customization of the Google Maps colors, just 1,9 KB.
+> Control options and customization of the Google Maps colors, just 1,7 KB.
 <center>
   <img src="preview.png" alt="Preview">
 </center>

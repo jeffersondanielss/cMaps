@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.0.4] - 2017-11-15
+
+### Changed
+- duplicate api key in multiples map instances
+
 ## [2.0.3] - 2017-11-02
 
 ### Changed

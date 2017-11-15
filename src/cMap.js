@@ -30,11 +30,15 @@
     }
   })
 
+  const hasGoogleApis = () =>
+    document.getElementById('googleapis')
+
   const loadGoogleAPI = ({ key }, callback) => {
-    var script = document.createElement('script')
+    let script = document.createElement('script')
     script.type = 'text/javascript'
     script.src = `https://maps.googleapis.com/maps/api/js?key=${key}`
     script.onload = callback
+    script.setAttribute('id', 'googleapis')
     document.body.append(script)
   }
 
@@ -43,7 +47,7 @@
   }
 
   const createMap = (div, config, layout) => {
-    var map = new google.maps.Map(div, config)
+    let map = new google.maps.Map(div, config)
     map.mapTypes.set('map_style', layout)
     map.setMapTypeId('map_style')
 
@@ -51,12 +55,18 @@
   }
 
   const marker = (map, { pinLat, pinLng, icon }) => {
-    var marker = new google.maps.Marker({
+    let marker = new google.maps.Marker({
       position: { lat: pinLat, lng: pinLng },
       map: map,
       icon: icon,
       animation: google.maps.Animation.DROP
     })
+  }
+
+  const awaitToInitialize = callback => {
+    document
+      .getElementById('googleapis')
+      .addEventListener('load', initialize, false)
   }
 
   const initialize = () => {
@@ -65,7 +75,9 @@
     const map = createMap(wrapper, config, layout)
     const market = marker(map, options)
   }
-
-  loadGoogleAPI(options, initialize)
+  
+  hasGoogleApis()
+    ? awaitToInitialize()
+    : loadGoogleAPI(options, initialize)
 
 }))

@@ -14,43 +14,41 @@ html(lang='en')
 
   body
     header.header
-      #example.header__map(data-pin-lat='-23.558752', data-pin-lng='-46.660247', data-map-lat='-23.558752', data-map-lng='-46.660247')
-
-    section.get-started
-      div.wrapper
-        h2.get-started__title custom map
-        p.get-started__subtitle To customize your map just follow these four steps.
-
-        ul.get-started__content
-
-          li.content__steps
-            h2.content__steps-title 1. Install
-            code.command
-              xmp
-                | bower install cMap --save
-
-          li.content__steps
-            h2.content__steps-title 2. Include scripts
-            code.command
-              xmp
-                <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-                <script src="bower_components/cMap/dist/cMap.min.js"></script>
-
-          li.content__steps
-            h2.content__steps-title 3. Include a basic markup HTML map
-            code.command
-              xmp
-                #example(data-pin-lat='-23.558752', data-pin-lng='-46.660247', data-map-lat='-23.558752', data-map-lng='-46.660247')
-
-          li.content__steps
-            h2.content__steps-title 4. start the plugin
-            code.command
-              xmp var example = new cMap({ options });
-            
-    footer.footer
       a.footer__link(href="https://github.com/jeffersondanielss/cMap/blob/master/README.md", target="_blank") Usage
       span |
       a.footer__link(href="https://github.com/jeffersondanielss/cMap", target="_blank") Fork it!
+    
 
-    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCP3iIRdwkWKwegt2dU4nA4KdpiInTmSlE')
+    section.section.section--left.clearfix
+      div.wrapper
+        div.section__map
+          #example.box__map
+
+        div.section__text
+          h2.section__title map Controls
+          p.section__description To customize your map just follow these four steps.
+
+    section.section.section--right.clearfix
+      div.wrapper
+        div.section__text
+          h2.section__title draggable
+          p.section__description To customize your map just follow these four steps.
+
+        div.section__map
+          #example2.box__map
+
+
+    section.section.section--left.clearfix
+      div.wrapper
+        div.section__map
+          #example.box__map
+
+        div.section__text
+          h2.section__title custom map
+          p.section__description To customize your map just follow these four steps.
+            
+
+    footer.footer
+
+    script(type='text/javascript' src='https://rawgit.com/jeffersondanielss/cMap/master/dist/cMap.min.js')
     script(src='dist/scripts/all.min.js')

@@ -1,5 +1,5 @@
 {
-  "name": "cMaps",
+  "name": "cmaps",
   "version": "3.0.0",
   "description": "Control options and customization of the Google Maps colors",
   "main": "dist/cMaps.min.js",

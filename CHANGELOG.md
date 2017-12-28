@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.0] - 2017-12-28
+
+### Changed
+- Name of package
+- register package in npmjs.org
+
 ## [2.0.4] - 2017-11-15
 
 ### Changed

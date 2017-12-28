@@ -1,15 +1,15 @@
 (function (root, factory) {
   'use strict'
   if( typeof define === 'function' && define.amd ) {
-    define('cMap', function() {
+    define('cMaps', function() {
       return factory
     })
   } else if( typeof module === 'object' && module.exports ) {
     module.exports = factory
   } else {
-    root.cMap = factory
+    root.cMaps = factory
   }
-}(this, function cMap(options){
+}(this, function cMaps(options){
   'use strict'
   
   const wrapper = document.getElementById(options.wrapperId)

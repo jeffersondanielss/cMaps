@@ -1,11 +1,12 @@
 {
-  "name": "cMap",
-  "version": "2.0.4",
+  "name": "cMaps",
+  "version": "3.0.0",
   "description": "Control options and customization of the Google Maps colors",
-  "main": "src/cMap.js",
+  "main": "dist/cMaps.min.js",
   "scripts": {
-    "watch": "babel src/cMap.js --watch --out-file dist/cMap.min.js",
-    "build": "babel src/cMap.js --out-file dist/cMap.min.js --source-maps",
+    "server": "http-server ./",
+    "watch": "babel src/cMaps.js --watch --out-file dist/cMaps.min.js",
+    "build": "babel src/cMaps.js --out-file dist/cMaps.min.js --source-maps",
     "lint": "node_modules/jshint/bin/jshint ./src/*.js"
   },
   "keywords": [
@@ -14,19 +15,20 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeffersondanielss/cMap.git"
+    "url": "git+https://github.com/jeffersondanielss/cMaps.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jeffersondanielss/cMap/issues"
+    "url": "https://github.com/jeffersondanielss/cMaps/issues"
   },
-  "homepage": "http://jeffersondanielss.github.io/cMap/",
+  "homepage": "http://jeffersondanielss.github.io/cMaps/",
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-minify": "^0.2.0",
+    "http-server": "^0.10.0",
     "jshint": "^2.9.2"
   }
 }

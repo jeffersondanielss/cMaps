@@ -8,13 +8,13 @@
 ### Install
 
 ```bash
-yarn add cMaps
+yarn add cmaps
 ```
 
 After installing, include the scripts in html.
 
 ```html
-<script src="node_modules/cMaps/dist/cMaps.min.js"></script>
+<script src="node_modules/cmaps/dist/cMaps.min.js"></script>
 ```
 
 ### Wrapper map need be something like:
@@ -70,6 +70,14 @@ var map = new cMaps({
 #### Style
 
 Use the [Styled Maps Wizard](http://googlemaps.github.io/js-samples/styledmaps/wizard/index.html) or [Snazzy Maps](https://snazzymaps.com) to export a JSON with all possible options and include as a parameter to the cMap.
+
+## Example
+
+You can see this example in `localhost:8080`, enter in example directory:
+
+```bash
+yarn start
+```
 
 #### Disclaimer
 > In the example folder has an demonstration of everything working if necessary :)

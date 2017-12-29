@@ -4,7 +4,6 @@
   "description": "Control options and customization of the Google Maps colors",
   "main": "dist/cMaps.min.js",
   "scripts": {
-    "server": "http-server ./",
     "watch": "babel src/cMaps.js --watch --out-file dist/cMaps.min.js",
     "build": "babel src/cMaps.js --out-file dist/cMaps.min.js --source-maps",
     "lint": "node_modules/jshint/bin/jshint ./src/*.js"
@@ -28,7 +27,6 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-minify": "^0.2.0",
-    "http-server": "^0.10.0",
     "jshint": "^2.9.2"
   }
 }

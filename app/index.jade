@@ -14,7 +14,7 @@ html(lang='en')
 
   body
     header.header
-      #example.header__map(data-pin-lat='-23.558752', data-pin-lng='-46.660247', data-map-lat='-23.558752', data-map-lng='-46.660247')
+      #example.header__map
 
     section.get-started
       div.wrapper
@@ -27,30 +27,28 @@ html(lang='en')
             h2.content__steps-title 1. Install
             code.command
               xmp
-                | bower install cMap --save
+                | yarn add cmaps
 
           li.content__steps
             h2.content__steps-title 2. Include scripts
             code.command
               xmp
-                <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-                <script src="bower_components/cMap/dist/cMap.min.js"></script>
+                <script src="node_modules/cmaps/dist/cMaps.min.js"></script>
 
           li.content__steps
             h2.content__steps-title 3. Include a basic markup HTML map
             code.command
               xmp
-                #example(data-pin-lat='-23.558752', data-pin-lng='-46.660247', data-map-lat='-23.558752', data-map-lng='-46.660247')
+                #example
 
           li.content__steps
             h2.content__steps-title 4. start the plugin
             code.command
-              xmp var example = new cMap({ options });
+              xmp var example = new cMaps({ options });
             
     footer.footer
-      a.footer__link(href="https://github.com/jeffersondanielss/cMap/blob/master/README.md", target="_blank") Usage
+      a.footer__link(href="https://github.com/jeffersondanielss/cMaps/blob/master/README.md", target="_blank") Usage
       span |
-      a.footer__link(href="https://github.com/jeffersondanielss/cMap", target="_blank") Fork it!
+      a.footer__link(href="https://github.com/jeffersondanielss/cMaps", target="_blank") Fork it!
 
-    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCP3iIRdwkWKwegt2dU4nA4KdpiInTmSlE')
     script(src='dist/scripts/all.min.js')
